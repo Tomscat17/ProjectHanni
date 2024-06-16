@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fce0df;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+}
+
+.main {
+    width: 600px;
+    box-sizing: border-box;
+    padding: 3em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.product__image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+}
+
+.title {
+    font-family: 'Knewave', cursive;
+    font-size: 35px;
+    color: #F25978;
+    margin-bottom: 10px;
+    transition: all 0.5s;
+}
+
+.title > span {
+    font-size: 18px;
+    display: block;
+    color: #f47a93;
+}
+
+.desc {
+    font-size: 16px;
+    color: #404040;
+    line-height: 1.6;
+    margin-top: 10px;
+    transition: all 0.5s;
+}
+
+.color-seleccion {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.color-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.color-item:hover {
+    transform: scale(1.1);
+}
+
+.red {
+    background-color: red;
+}
+
+.white {
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.black {
+    background-color: black;
+}

@@ -1,0 +1,148 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.main {
+    width: 300px;
+    height: 400px;
+    box-sizing: border-box;
+    padding: 3em;
+    margin: 20px;
+    position: relative;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.main:hover {
+    transform: translateY(-10px);
+}
+
+.main::before,
+.main::after {
+    content: "";
+    width: 0;
+    height: 0;
+    box-sizing: inherit;
+    margin-top: 30px;
+    margin-bottom: -30px;
+    border: 3px solid transparent;
+    position: absolute;
+}
+
+.main::before {
+    top: 0;
+    left: 0;
+}
+
+.main::after {
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.main:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.main:hover::before {
+    border-top-color: #F25978;
+    border-right-color: #F25978;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+}
+
+.product__image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+}
+
+.title {
+    font-family: 'Knewave', cursive;
+    font-size: 24px;
+    color: #F25978;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.title > span {
+    font-size: 16px;
+    display: block;
+    color: #f47a93;
+}
+
+.desc {
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #404040;
+    text-align: center;
+    line-height: 1.8;
+}
+.selector-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.selector-item {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.selector-item--disponible:hover {
+    border-color: #999;
+}
+
+.selector-cuadro {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    z-index: 1;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.informacion-hover {
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    padding: 5px;
+    display: none;
+    z-index: 2;
+}
+
+.selector-item:hover .informacion-hover {
+    display: block;
+}
+
+.hover-item-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0;
+}
+
+.hover-item {
+    font-size: 14px;
+    color: #333;
+}
